@@ -1,0 +1,19 @@
+{
+    "printWidth": 80,
+    "tabWidth": 4,
+    "trailingComma": "none",
+    "singleQuote": false,
+    "semi": true,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "^@core/(.*)$",
+        "^@server/(.*)$",
+        "^@ui/(.*)$",
+        "^./features/(.*)$",
+        "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+}
