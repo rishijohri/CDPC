@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { RootState } from "../app/store";
-import { readTodoAction } from "../features/todo/todoSlice";
+import { setTodoListAction } from "../features/todo/todoSlice";
 import { TodoAPI } from "../services";
 
 export default function useReadTodo() {
@@ -10,8 +10,8 @@ export default function useReadTodo() {
     const dispatch = useAppDispatch();
     useEffect(() => {
         TodoAPI.readTodo()
-            .then((response) => {
-                dispatch(readTodoAction(response));
+            .then((todoList) => {
+                dispatch(setTodoListAction(todoList));
             })
             .catch((error) => {
                 console.log(error);

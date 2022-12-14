@@ -4,12 +4,12 @@ import useReadTodo from "../hooks/useReadTodo";
 import { TodoType } from "../types";
 
 function ReadTodo() {
-    const todo = useReadTodo();
+    const todoList = useReadTodo();
     return (
         <div>
             <ul>
-                {todo.map((todo: TodoType) => (
-                    <li key={todo.id}>{todo.title}</li>
+                {todoList.map((todoItem: TodoType) => (
+                    <li key={todoItem.id}>{todoItem.title}</li>
                 ))}
             </ul>
         </div>
