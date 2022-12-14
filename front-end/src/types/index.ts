@@ -1,12 +1,12 @@
-import { Key } from "react"
+import { Key } from "react";
 
 interface TodoType {
-    createdAt: String,
-    createdBy: String,
-    description: String,
-    needsReminder: boolean,
-    title: String,
-    id: Key
+    createdAt: string;
+    createdBy: string;
+    description: string;
+    needsReminder: boolean;
+    title: string;
+    id: Key;
 }
 
-export type {TodoType}
+export type { TodoType };

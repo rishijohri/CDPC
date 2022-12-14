@@ -1,6 +1,8 @@
-import React, {useEffect} from "react";
-import { TodoType } from "../types";
+import React from "react";
+
 import useReadTodo from "../hooks/useReadTodo";
+import { TodoType } from "../types";
+
 function ReadTodo() {
     const todo = useReadTodo();
     return (
@@ -14,4 +16,4 @@ function ReadTodo() {
     );
 }
 
-export default ReadTodo
+export default ReadTodo;

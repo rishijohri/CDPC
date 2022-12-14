@@ -1,30 +1,27 @@
-import React, {useState, useEffect} from "react";
-import { TodoAPI } from "../services";
 import { useAppDispatch } from "../app/hooks";
 import { createTodoAction } from "../features/todo/todoSlice";
+import { TodoAPI } from "../services";
 import { TodoType } from "../types";
 
 export default function useCreateTodo() {
-    const [todo, setTodo] = useState<TodoType[]>([]);
     const dispatch = useAppDispatch();
-    
-    const AddHandler = (todo_item: TodoType) => {
-        const response = TodoAPI.createTodo(todo_item);
+
+    const AddHandler = (todoItem: TodoType) => {
+        TodoAPI.createTodo(todoItem);
         // do business logic here
         try {
             Promise.all([
-                TodoAPI.createTodo(todo_item),
+                TodoAPI.createTodo(todoItem),
                 (response: TodoType) => {
                     //do business logic here
                     return response;
                 },
-                dispatch(createTodoAction(todo_item))
-            ])
+                dispatch(createTodoAction(todoItem))
+            ]);
         } catch (error) {
             console.log(error);
         }
-        
-    }
+    };
 
     return AddHandler;
 }
