@@ -6,15 +6,15 @@ import { TodoType } from "../types";
 function CreateTodo() {
     const addHandler = useCreateTodo();
     const todoItem: TodoType = {
-        id: 3,
-        title: "test",
-        description: "test",
-        needsReminder: false,
         createdAt: Date(),
-        createdBy: "test"
+        createdBy: 'test',
+        description: 'test',
+        needsReminder: true,
+        title: 'test',
+        id: 3
     };
-    const handleAddTodo = () => {
-        addHandler(todoItem);
+    const handleAddTodo = async () => {
+        await addHandler(todoItem);
     };
     return (
         <button

@@ -30,9 +30,7 @@ export const todoSlice = createSlice({
             }
         },
         setTodoListAction: (state, action: PayloadAction<TodoType[]>) => {
-            action.payload.forEach((todo) => {
-                state.push(todo);
-            });
+            return action.payload;
         }
     }
 });

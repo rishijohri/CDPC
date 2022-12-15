@@ -32,10 +32,10 @@ async function readTodo(): Promise<TodoType[]> {
     return dummyTodos;
 }
 
-async function createTodo(todoItem: TodoType): Promise<TodoType["id"]> {
+async function createTodo(todoItem: TodoType): Promise<TodoType> {
     await sleep(2);
-    dummyTodos.push(todoItem);
-    return todoItem.id;
+    // push todoItem to server
+    return todoItem;
 }
 
 async function updateTodo(id: TodoType["id"]): Promise<boolean> {

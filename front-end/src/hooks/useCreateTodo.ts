@@ -5,12 +5,10 @@ import { TodoType } from "../types";
 
 export default function useCreateTodo() {
     const dispatch = useAppDispatch();
-
     const addHandler = async (todoItem: TodoType) => {
-        TodoAPI.createTodo(todoItem);
-        // do business logic here
         try {
             const response = await TodoAPI.createTodo(todoItem);
+            console.log(response)
             if (response) {
                 dispatch(addTodoItemAction(todoItem));
             } else {
