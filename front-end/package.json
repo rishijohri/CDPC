@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@reduxjs/toolkit": "^1.9.1",
         "@chakra-ui/icons": "^2.0.13",
         "@chakra-ui/react": "^2.4.3",
         "@chakra-ui/theme-tools": "^2.0.14",
@@ -52,7 +53,6 @@
         ]
     },
     "devDependencies": {
-        "@reduxjs/toolkit": "^1.9.1",
         "@trivago/prettier-plugin-sort-imports": "^4.0.0",
         "eslint": "^8.29.0",
         "eslint-config-prettier": "^8.5.0",
