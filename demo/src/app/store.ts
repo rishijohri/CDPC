@@ -1,9 +1,10 @@
 import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
 
-import exampleReducer from "../static_module/main/features/example/exampleSlice";
+import todoReducer from "../features/todo/todoSlice";
+
 export const store = configureStore({
     reducer: {
-        example: exampleReducer
+        todo: todoReducer
     }
 });
 
