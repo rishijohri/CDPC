@@ -3,7 +3,7 @@ import {Route, Routes } from "react-router-dom";
 import PlacementsModule from "./placements_module";
 import StaticModule from "./static_module";
 import ResourcesModule from "./resources_module";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 
 function App() {
     return (
