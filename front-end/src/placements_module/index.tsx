@@ -1,11 +1,14 @@
-import {Route} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+
+import CommonModule from "../common";
 import PlacementsMainModule from "./main";
 
 const PlacementsModule = () => {
     return (
-        <>
-                <Route path="/" element={<PlacementsMainModule />} />
-        </>
+        <Routes>
+            <Route path="/" element={<PlacementsMainModule />} />
+            <Route path="/test" element={<CommonModule />} />
+        </Routes>
     );
 };
 
